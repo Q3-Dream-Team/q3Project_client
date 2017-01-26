@@ -82,11 +82,11 @@ render: function(){
 
 
       <div>
+      {isLogged}
+      {login}
 
         <div className="postsContainer">
 
-        {isLogged}
-          {login}
           <br />
           <div>
             Lorem ipsum dolor sit amet, senserit complectitur definitionem id his. Ea sit vivendum persequeris. Essent aeterno sit an, et vim dictas accusata philosophia, iudico impetus convenire ut mea. Ne noluisse lucilius sea, autem detracto conclusionemque nec an, posse antiopam at has. Te iudico discere tibique cum, quidam luptatum vim no, nec aeque nostrum cu. At nam aeterno senserit.
