@@ -102,21 +102,15 @@ const ProfileForm = React.createClass({
 
       <Card className="uiCard">
         <div className="profileContainer">
-          <h3>Please Enter Your Information</h3>
+          <h3>Please Enter Your Information Below</h3>
           <form onSubmit={this.handleSubmit}>
 
             <div className="row">
               <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                <TextField className="profileTextArea" type="text" value={this.state.username} onChange={this.setValue.bind(this, 'username')}
-                  id="username" floatingLabelText="Username" disabled={this.props.disabled}
-                  underlineFocusStyle={styles.underlineStyle}
-                  floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
+
               </div>
               <div className="col-sm-offset-2 col-md-offset-1 col-md-5 col-lg-offset-1">
-                <TextField className="profileTextArea" type="password" floatingLabelText="Password" id="password" value={this.state.password} onChange={this.setValue.bind(this, 'password')} hidden={this.props.disabled} disabled={this.props.disabled}
-                underlineFocusStyle={styles.underlineStyle}
-                floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
-                  />
+
               </div>
             </div>
 
@@ -142,138 +136,28 @@ const ProfileForm = React.createClass({
                 floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
               </div>
               <div className="col-sm-offset-2 col-md-offset-1 col-md-5 col-lg-offset-1">
-                <TextField className="profileTextArea" type="text" floatingLabelText="Email Address" value={this.state.email} onChange={this.setValue.bind(this, 'email')} disabled={this.props.disabled}
+                <TextField className="profileTextArea" type="text" floatingLabelText="Email Address" value={this.state.email} onChange={this.setValue.bind(this, 'email')}
                 underlineFocusStyle={styles.underlineStyle}
                 floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
               </div>
             </div>
               <div className="row">
                 <div className="col-md-offset-1 col-md-5 col-lg-offset-1">
-                  <TextField className="profileTextArea" type="number" floatingLabelText="Zip Code" value={this.state.zipCode} onChange={this.setValue.bind(this, 'zipCode')}
+                  <TextField className="profileTextArea" type="number" floatingLabelText="Number of Guests (0, 1, 2)" value={this.state.zipCode} onChange={this.setValue.bind(this, 'zipCode')}
                   underlineFocusStyle={styles.underlineStyle}
                   floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
                 </div>
                 <div className="col-md-offset-1 col-sm-offset-2 col-md-5">
                 </div>
               </div>
-            <h3 className="profileAbout">About</h3>
+            <h3 className="profileAbout">Additional Questions or Comments?</h3>
+            <h4 className="profileAbout1">Leave your questions and comments below.  We will answer any questions by email.  Please leave a contact number and specify if you would prefer another means of communication.</h4>
               <div>
                 <label>
                   <div className="row profileFormChecklist">
-                  <div className="skillsText">My Skills:</div>
+                  <div className="skillsText"></div>
                   <div className="col-lg-5">
-                  <Checkbox
-                    label="None"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="None"
-                    value="1"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Painting"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Painting"
-                    value="2"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Drawing"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Drawing"
-                    value="3"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Photography"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Photography"
-                    value="5"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Metal Work"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Metal Work"
-                    value="6"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Sewing"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Sewing"
-                    value="7"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  </div>
-                  <div className="col-lg-5">
-                  <Checkbox
-                    label="Knitting"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Knitting"
-                    value="8"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Quilting"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Quilting"
-                    value="9"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Wood Carving"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Wood Carving"
-                    value="10"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Collaging"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Collaging"
-                    value="11"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
-                  <Checkbox
-                    label="Graphic Design"
-                    type="checkbox"
-                    style={styles.checkbox}
-                    name="Graphic Design"
-                    value="12"
-                    onCheck={this.skillsHandleChange}
-                    disabled={this.props.disabled}
-                    iconStyle={{fill: "#90C15B"}}
-                  />
+
                   </div>
                   </div>
                 </label>
@@ -281,24 +165,24 @@ const ProfileForm = React.createClass({
 
                 <div className="row">
                   <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                    <TextField className="profileTextArea" type="text" floatingLabelText="Profile URL" value={this.state.profileUrl} onChange={this.setValue.bind(this, 'profileUrl')}
+                    <TextField className="profileTextArea" type="text" floatingLabelText="Questions" value={this.state.profileUrl} onChange={this.setValue.bind(this, 'profileUrl')}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
                   </div>
                   <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                    <TextField className="profileTextArea" type="text" floatingLabelText="Personal Website" value={this.state.website} onChange={this.setValue.bind(this, 'website')}
+                    <TextField className="profileTextArea" type="text" floatingLabelText="Comments" value={this.state.website} onChange={this.setValue.bind(this, 'website')}
                     underlineFocusStyle={styles.underlineStyle}
                     floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-5 col-md-offset-1 col-lg-offset-1">
-                    <TextField className="profileTextArea" type="text" floatingLabelText="Bio" value={this.state.userBio} onChange={this.setValue.bind(this, 'userBio')}
-                    underlineFocusStyle={styles.underlineStyle}
-                    floatingLabelFocusStyle={styles.floatingLabelFocusStyle} />
+
+                  <div>
+                  <h3>Visit the home menu page to <a className="linkstyle1" href="/newPost">Request a Parking Pass</a></h3>
                   </div>
+
                 </div>
                 <br></br>
+                <br></br>
+
                 <div className="row">
                   <div className="col-sm-12 profileSubmitButton">
                     <Button type="submit" label="Submit"

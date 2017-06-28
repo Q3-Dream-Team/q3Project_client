@@ -28,31 +28,31 @@ const post = React.createClass({
     })
   },
 
-  getComments() {
-    let postId = this.props.postData.id
-    request
-    .get(DATABASE_URL + `/api/comments/${postId}`)
-    .end((err, res) => {
-      this.setState({comments: res.body});
-    })
-  },
+  // getComments() {
+  //   let postId = this.props.postData.id
+  //   request
+  //   .get(DATABASE_URL + `/api/comments/${postId}`)
+  //   .end((err, res) => {
+  //     this.setState({comments: res.body});
+  //   })
+  // },
 
-  setupSkills() {
-    // let skillsArray = [];
-    for(var skill in this.props.postData.skills){
-      this.state.skills.push(this.props.postData.skills[skill])
-    }
-  },
+  // setupSkills() {
+  //   // let skillsArray = [];
+  //   for(var skill in this.props.postData.skills){
+  //     this.state.skills.push(this.props.postData.skills[skill])
+  //   }
+  // },
 
   componentDidMount() {
     this.getComments();
-    this.setupSkills();
+
   },
 
-  handleAddCommentText(event){
-    this.setState({addCommentText:event.target.value});
-    // console.log(this.state.addCommentText);
-  },
+  // handleAddCommentText(event){
+  //   this.setState({addCommentText:event.target.value});
+  //   // console.log(this.state.addCommentText);
+  // },
 
   postComment(event){
     event.preventDefault();
@@ -85,7 +85,7 @@ const post = React.createClass({
           title={this.props.postData.title}
           subtitle={this.props.postData.username}
           actAsExpander={true}
-          showExpandableButton={true}
+          showExpandableButton={false}
         />
         <CardText className="cardBody">
           <p>{this.props.postData.description}</p>
@@ -93,13 +93,13 @@ const post = React.createClass({
           <Table>
             <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
               <TableRow>
-                <TableHeaderColumn>Budget</TableHeaderColumn>
-                <TableHeaderColumn>Location</TableHeaderColumn>
+                <TableHeaderColumn></TableHeaderColumn>
+                <TableHeaderColumn></TableHeaderColumn>
               </TableRow>
             </TableHeader>
             <TableBody displayRowCheckbox={false}>
               <TableRow>
-                <TableRowColumn>${this.props.postData.budget}</TableRowColumn>
+                <TableRowColumn>Time:  {this.props.postData.budget}</TableRowColumn>
                 <TableRowColumn>{this.props.postData.location}</TableRowColumn>
               </TableRow>
             </TableBody>
@@ -120,10 +120,7 @@ const post = React.createClass({
           <div>
             <Table>
               <TableHeader displaySelectAll={false} adjustForCheckbox={false}>
-                <TableRow>
-                  <TableHeaderColumn>User</TableHeaderColumn>
-                  <TableHeaderColumn>Comment</TableHeaderColumn>
-                </TableRow>
+
               </TableHeader>
               <TableBody displayRowCheckbox={false}>
                 {
@@ -151,6 +148,9 @@ const post = React.createClass({
                 value={this.state.addCommentText}
                 onChange={this.handleAddCommentText}
               />
+
+
+
               <FlatButton label="submit" type="submit" value="Login" id="submit" />
             </form>
 

@@ -40,7 +40,9 @@ nav {
 }
 
 .navWrapper {
-  text-align: right;
+  display: flex;
+  direction: row;
+  justify-content: center
 }
 
 .navButton {
@@ -65,16 +67,36 @@ nav {
 }
 
 .postsContainer {
-  max-width: 960px;
+
   height: auto;
   margin: 20px auto;
 }
 
-.uiCard {
+.uiCardMenu {
+  background: url(../public/img/moab.jpg) no-repeat center center;
+  background-size: cover;
+  margin: 20px;
+  transition: .5s
+
+}
+
+.uiCard1 {
+  background: url(../public/img/googiemoab.jpg) no-repeat center center;
+  background-size: cover;
   margin: 20px;
   transition: .5s
 }
+.uiCard3 {
+
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  transition: .5s
+}
 .uiCard:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4) !important;
+}
+.uiCard1:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -82,6 +104,7 @@ nav {
   /*padding-top: 0px !important;*/
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   margin: 0 10px 10px 10px;
+
 }
 
 /*----- Landing page -----*/
@@ -103,8 +126,16 @@ nav {
 }
 
 .landingCarouselHeader {
+  color: #8DBC5B;
   font-size: 10rem;
-  text-shadow: 2px 2px 5px #545A5E;
+  text-shadow: 4px 4px 7px #545A5E;
+
+}
+.landingCarouselHeader1 {
+  font-size: 10rem;
+  text-shadow: 4px 4px 7px #545A5E;
+  color: transparent;
+
 }
 
 .primaryLandingCarouselParagraph {
@@ -113,7 +144,16 @@ nav {
 }
 
 .secondarylandingCarouselParagraph {
+  opacity: 0.1;
   text-shadow: 2px 2px 5px #545A5E;
+}
+.secondaryLandingCarouselParagraph1 {
+  color: white;
+
+}
+.secondarylandingCarouselParagraph2 {
+  text-shadow: 2px 2px 5px #545A5E;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -140,6 +180,17 @@ img{
 
 .profileAbout {
   margin-left: -4rem;
+}
+
+.profileAbout1 {
+  text-align: center;
+}
+
+.profileAbout2 {
+  text-align: center;
+}
+.profileTextArea1 {
+  text: center;
 }
 
 .profileContainer{
@@ -180,14 +231,37 @@ h3{
 .postSubmitButton {
   text-align: center;
   margin-left: 40%;
-  backgroundColor: #90C15B;
+
 }
 
 .newPostContainer {
   flex-wrap: wrap;
   width: 50%;
-  margin: 0 auto;
+  margin-left: 40%;
   padding-bottom: 20px;
+  padding-top: 20px;
+}
+.newPostContainer1 {
+  flex-wrap: wrap;
+  width: 50%;
+  margin-left: 40%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 4rem;
+  text-shadow: 2px 2px 5px black;
+  color: white;
+
+}
+.newPostContainer12 {
+  flex-wrap: wrap;
+  width: 50%;
+  margin-left: 40%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: 4rem;
+  text-shadow: 5px 5px 5px black;
+  color: white;
+
 }
 
 .postFormTitle {
@@ -217,6 +291,36 @@ h3{
   width: auto;
   margin-top: -10px;
 }
-/*
-@media only screen and (max-width: 400px) {
-body { font-size:70%;}*/
+
+.linkstyle {
+  color: white;
+  margin-bottom: 10px;
+}
+.linkstyle1 {
+  color: black;
+  text-align: center;
+  align-content: center;
+}
+
+.foot{
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/*<-----menu title------>*/
+.menuTitle {
+  padding: 15px;
+}
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 529px)";
+@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1129px)";
+@desktop-above: ~"only screen and (min-width: 950px)";
+@tablet-above: ~"only screen and (min-width: 530px)";
+@mobile-above: ~"only screen and (min-width: 320px)";

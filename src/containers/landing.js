@@ -61,11 +61,7 @@ var landingContainer = React.createClass({
 render: function(){
     var login = (true) ?
     <LoginForm
-      username={this.state.username}
-      password={this.state.password}
-      handleUsername={this.handleUsername}
-      handlePassword={this.handlePassword}
-      handleLoginSubmit={this.handleLoginSubmit}
+
     /> : null;
 
 
@@ -86,31 +82,54 @@ render: function(){
         <div className="postsContainer">
           </div>
           <Carousel>
+          <Carousel.Item>
+          <img width={700} height={300} alt="700x300" src="img/teepee.jpg"/>
+          <Carousel.Caption>
+          <h1 className="landingCarouselHeader">welcome</h1>
+
+          <h2 className="secondaryLandingCarouselParagraph">Matt and Heidi</h2>
+          <h2 className="secondaryLandingCarouselParagraph">2017</h2>
+          <h4 className="secondaryLandingCarouselParagraph"><a className="linkstyle" href="/newPost">enter site</a></h4>
+          </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+          <img width={700} height={300} alt="700x300" src="img/googie.jpg"/>
+          <Carousel.Caption>
+          <h1 className="landingCarouselHeader"></h1>
+          <h2 className="secondaryLandingCarouselParagraph"></h2>
+          <h3 className="secondaryLandingCarouselParagraph"><a className="linkstyle" href="/newPost">enter site</a></h3>
+          </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+          <img width={700} height={300} alt="700x300" src="img/googiemt.jpg"/>
+          <Carousel.Caption>
+          <h1 className="landingCarouselHeader"></h1>
+          <h2 className="secondaryLandingCarouselParagraph"></h2>
+          <h3 className="secondaryLandingCarouselParagraph"><a className="linkstyle" href="/newPost"></a></h3>
+          </Carousel.Caption>
+          </Carousel.Item>
             <Carousel.Item>
-              <img width={900} height={500} alt="900x500" src="img/sketching-crop.jpg"/>
+              <img width={700} height={300} alt="700x300" src="img/googiemoab.jpg"/>
               <Carousel.Caption>
-                <h1 className="landingCarouselHeader">ArtOps</h1>
-                <h2 className="primaryLandingCarouselParagraph">Connecting local Artists with Customers who <i>NEED</i> their products.</h2>
+                <h1 className="landingCarouselHeader"></h1>
+                <h2 className="primaryLandingCarouselParagraph">matt and heidi</h2>
+                <h2 className="primaryLandingCarouselParagraph">2017</h2>
+                <h3 className="secondaryLandingCarouselParagraph"><a className="linkstyle" href="/newPost">enter site</a></h3>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <img width={900} height={500} alt="900x500" src="img/art-house-painting-crop.jpg"/>
+              <img width={700} height={300} alt="700x300" src="img/googiepuppy.jpg"/>
               <Carousel.Caption>
-                <h1 className="landingCarouselHeader">Local Artists</h1>
-                <h2 className="secondaryLandingCarouselParagraph">ArtOps allows Local Artists to post information about the kind of work that they create so that other Artists and <br></br>Customers can find them.</h2>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img width={900} height={500} alt="900x500" src="img/art-house-sculpting-crop.jpg"/>
-              <Carousel.Caption>
-                <h1 className="landingCarouselHeader">Art Dilettante</h1>
-                <h2 className="secondaryLandingCarouselParagraph">Customers can search through ArtOps posts to find Local Artist, or post their needs to connect them with Artists who can make their project dreams become reality.</h2>
+                <h1 className="landingCarouselHeader1">   </h1>
+                <h2 className="secondaryLandingCarouselParagraph1">   </h2>
+                <h2 className="secondaryLandingCarouselParagraph1">   </h2>
+                <h3 className="secondaryLandingCarouselParagraph2"><a className="linkstyle" href="/newPost"></a></h3>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         <footer>
-          <p className="footerText">
-            Created By: Anna, Cassie, Evan, Heidi, and Matt
+          <p className="foot">
+            Official RSVP and Information Website for Matthew Mikio Ellison and Heidi Rodriguez' wedding   2017
           </p>
         </footer>
       </div>

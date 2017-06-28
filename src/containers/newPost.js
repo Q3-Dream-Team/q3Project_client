@@ -1,5 +1,5 @@
 import React from 'react';
-import NewPost from '../components/NewPostForm';
+import NewPost from '../components/newPostForm';
 import {browserHistory} from 'react-router';
 import Nav from '../components/Nav';
 

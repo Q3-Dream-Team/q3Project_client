@@ -28,35 +28,12 @@ const LoginForm = React.createClass({
         <form onSubmit={this.props.handleLoginSubmit}>
           {/* <RaisedButton label="Username" /> */}
           {/* <div className="col-l-6"> */}
-          <TextField
-            floatingLabelText="Username"
-            type="text"
-            value={this.props.username}
-            onChange={this.props.handleUsername}
-            id="username"
-            className="marginRight"
-            underlineFocusStyle={styles.underlineStyle}
-            floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
-          />
+
           {/* </div> */}
           {/* <div className="col-l-6"> */}
-          <TextField
-            floatingLabelText="Password"
-            type="password"
-            value={this.props.password}
-            onChange={this.props.handlePassword}
-            className="marginRight"
-            underlineFocusStyle={styles.underlineStyle}
-            floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
-          />
+
           {/* </div> */}
-          <RaisedButton label="Log in"
-            type="submit"
-            value="Login"
-            id="submit"
-            backgroundColor="#90C15B"
-          />
-          {/* <input type="submit" value="Login" id="submit"/> */}
+
         </form>
       </div>
 

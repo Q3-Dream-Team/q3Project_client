@@ -4,7 +4,7 @@ import React from 'react';
 import Post from './Post';
 import request from 'superagent';
 
-const DATABASE_URL = "https://artops-server.herokuapp.com";
+const DATABASE_URL = "http://localhost:3001";
 
 
 const PostsContainer = React.createClass({
@@ -17,7 +17,7 @@ const PostsContainer = React.createClass({
 
   getPostDataFromAPI() {
     request
-    .get(DATABASE_URL + '/api/posts')
+    .get(DATABASE_URL + '/api/schedulePosts')
     .end((err, res) => {
       if(err) {
         console.log(err);

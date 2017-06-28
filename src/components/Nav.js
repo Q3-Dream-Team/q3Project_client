@@ -16,35 +16,17 @@ const Nav = React.createClass({
     return(
       <nav>
         <div className="navWrapper">
-          <img className="logo" src="img/ArtOps.png"/>
-          <RaisedButton
-          className="navButton"
-             href="/feed"
-             label="Home"
-             backgroundColor="#90C15B"
-           />
-           { " " }
-          <RaisedButton
-          className="navButton"
-             href="/myProfile"
-             label="My Profile"
-             backgroundColor="#90C15B"
-           />
-           { " " }
+          <img className="logo" src="img/moab.jpg"/>
+          <img className="logo" src="img/moab.jpg"/>
           <RaisedButton
           className="navButton"
              href="/newPost"
-             label="New Project"
+             label="Home Menu"
              backgroundColor="#90C15B"
            />
-           { " " }
+           <img className="logo" src="img/moab.jpg"/>
+           <img className="logo" src="img/moab.jpg"/>
 
-          <RaisedButton
-          className="navButton"
-             onClick={this.props.handleLogoutSubmit}
-             label="Logout"
-             backgroundColor="#90C15B"
-           />
        </div>
      </nav>
 

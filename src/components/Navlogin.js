@@ -11,12 +11,18 @@ const Nav1 = React.createClass({
     return(
      <nav>
        <div className="navWrapper">
-       <img className="logo" src="img/ArtOps.png"/>
-          <RaisedButton
-           href="/profile"
-           label="Regster Here"
-           backgroundColor="#90C15B"
-           />
+       <img className="logo" src="img/moab.jpg"/>
+       <img className="logo" src="img/moab.jpg"/>
+
+       <RaisedButton
+       className="navButton"
+          href="/newPost"
+          label="Home Menu"
+          backgroundColor="#90C15B"
+        />
+          
+           <img className="logo" src="img/moab.jpg"/>
+           <img className="logo" src="img/moab.jpg"/>
        </div>
      </nav>
    );
